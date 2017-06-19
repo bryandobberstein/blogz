@@ -1,0 +1,10 @@
+{%extends "base.html"%}
+{%block content%}
+  <h3>{{post.title}}</h3>
+  <br>
+  {{post.body}}
+  <form method = "post" action = "/deleted">
+    <input type = "hidden" name = "postid" value = {{post.id}}>
+    <input type = "submit" value = "Delete Post">
+  </form>
+{%endblock%}
